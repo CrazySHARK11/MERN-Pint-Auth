@@ -52,7 +52,7 @@ router.post('/login', async (req, res) => {
     res.cookie('token', token, { 
         httpOnly: true, 
         maxAge: 360000, 
-        secure: true
+        domain:"vercel.app"
     });
  
     return res.json({
@@ -88,7 +88,7 @@ router.post('/forgot-password', async (req, res) => {
             from: 'heelme1181@gmail.com',
             to: email,
             subject: 'reset password',
-            text: `http://localhost:5173/resetpassword/${token}`
+            text: `https://mern-pint-front.vercel.app/resetpassword/${token}`
           };
           
           transporter.sendMail(mailOptions, function(error, info){

@@ -9,7 +9,7 @@ dotenv.config()
 const app = express()
  
 const corsOpts = {
-    origin: 'http://localhost:5173',
+    origin: 'https://mern-pint-front.vercel.app',
     credentials: true,
     methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
 };
@@ -26,7 +26,7 @@ mongoose.connect("mongodb+srv://heelme1181:hLVAyMNbPnreBoYx@one.swaretx.mongodb.
     .then(() => console.log("Connected to mongoDB") )
     .catch((err) => console.log(err))
 
-    
+
 // hLVAyMNbPnreBoYx
 
 app.use('/auth', UserRouter)
