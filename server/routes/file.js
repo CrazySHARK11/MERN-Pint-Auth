@@ -52,7 +52,8 @@ router.post('/login', async (req, res) => {
     res.cookie('token', token, { 
         httpOnly: true, 
         maxAge: 360000, 
-        domain:"vercel.app"
+        domain:"vercel.app",
+        sameSite: 'none'
     });
  
     return res.json({
