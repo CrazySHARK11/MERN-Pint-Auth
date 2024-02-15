@@ -14,7 +14,7 @@ const Signup = () => {
   axios.defaults.withCredentials = true;
   const submit = (e) =>{
     e.preventDefault()
-    axios.post("http://localhost:3000/auth/signup", { username, email, password })
+    axios.post("https://mernpinauth.vercel.app/auth/signup", { username, email, password })
     .then(res => {
       if(res.data.status){
         toast(res.data.message + " You can login now")

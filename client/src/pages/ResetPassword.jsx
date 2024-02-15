@@ -14,7 +14,7 @@ const ResetPassword = () => {
 
   const submit = (e) =>{
     e.preventDefault()
-    axios.post("http://localhost:3000/auth/reset-password/" + token , { password })
+    axios.post("https://mernpinauth.vercel.app/auth/reset-password/" + token , { password })
     .then(res => {
       console.log(res)
        if(res.data.status){

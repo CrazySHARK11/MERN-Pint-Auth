@@ -14,7 +14,7 @@ const Login = () => {
 
   const submit = (e) =>{
     e.preventDefault()
-    axios.post("http://localhost:3000/auth/login", { email, password })
+    axios.post("https://mernpinauth.vercel.app/auth/login", { email, password })
     .then(res => {
       console.log(res)
       if(res.data.status){

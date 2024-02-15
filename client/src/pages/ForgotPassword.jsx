@@ -10,7 +10,7 @@ const ForgotPassword = () => {
   axios.defaults.withCredentials = true;
   const submit = (e) => {
     e.preventDefault()
-    axios.post("http://localhost:3000/auth/forgot-password", { email })
+    axios.post("https://mernpinauth.vercel.app/auth/forgot-password", { email })
       .then(res => {
         toast(res.data.message)
         console.log(res)

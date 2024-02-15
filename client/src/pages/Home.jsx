@@ -11,7 +11,7 @@ const Home = () => {
   axios.defaults.withCredentials = true;
 
   useEffect(() => {
-    axios.get('http://localhost:3000/auth/verify')
+    axios.get('https://mernpinauth.vercel.app/auth/verify')
       .then(res => {
         if (res.data.status) {
           setUser(res.data.data)
@@ -27,7 +27,7 @@ const Home = () => {
     if (ask === false) {
       console.log("asdad")
     } else {
-      axios.get('http://localhost:3000/auth/logout')
+      axios.get('https://mernpinauth.vercel.app/auth/logout')
         .then(res => {
           if (res.data.status) {
             window.location.reload()
